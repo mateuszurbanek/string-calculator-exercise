@@ -7,6 +7,7 @@ public class Main {
     }
 
     public static int Add(String numbers) {
+        if(numbers.endsWith(",")) throw new IllegalArgumentException("Error: Separators are not allowed at the end of String");
         if(numbers.isEmpty()) return 0;
 
         String normalizedNumbers = numbers.replace("\n", ",");
