@@ -44,8 +44,8 @@ public class Main {
                 String value = currentNumber.toString();
                 if(!value.isEmpty()) {
                     int number = Integer.parseInt(value);
-                    if (number < 0) negativeNumbers.add(number);
-                    else intList.add(number);
+                    if(number < 0) negativeNumbers.add(number);
+                    else if(number <= 1000) intList.add(number);
                     currentNumber.setLength(0);
                 }
                 position += delimiter.length();
@@ -61,8 +61,8 @@ public class Main {
 
         if(!currentNumber.toString().trim().isEmpty()) {
             int number = Integer.parseInt(currentNumber.toString());
-            if (number < 0) negativeNumbers.add(number);
-            else intList.add(number);
+            if(number < 0) negativeNumbers.add(number);
+            else if(number <= 1000) intList.add(number);
         }
 
         if(!negativeNumbers.isEmpty()) {
